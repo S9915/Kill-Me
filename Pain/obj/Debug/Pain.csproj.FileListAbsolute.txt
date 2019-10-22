@@ -1,0 +1,10 @@
+F:\Какие-то файлы\Pain\Pain\bin\Debug\Pain.exe.config
+F:\Какие-то файлы\Pain\Pain\bin\Debug\Pain.exe
+F:\Какие-то файлы\Pain\Pain\bin\Debug\Pain.pdb
+F:\Какие-то файлы\Pain\Pain\obj\Debug\Pain.csprojAssemblyReference.cache
+F:\Какие-то файлы\Pain\Pain\obj\Debug\Pain.Form1.resources
+F:\Какие-то файлы\Pain\Pain\obj\Debug\Pain.Properties.Resources.resources
+F:\Какие-то файлы\Pain\Pain\obj\Debug\Pain.csproj.GenerateResource.cache
+F:\Какие-то файлы\Pain\Pain\obj\Debug\Pain.exe
+F:\Какие-то файлы\Pain\Pain\obj\Debug\Pain.pdb
+F:\Какие-то файлы\Pain\Pain\obj\Debug\Pain.Form2.resources
