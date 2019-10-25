@@ -1,0 +1,112 @@
+        private void очиститьВсеПоляToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            foreach (Control c in Controls)
+                if (c is TextBox)
+                    ((TextBox)c).Text = null;
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("alpha build, don't kill me please :)");
+        }
+
+        private void button2_MouseClick(object sender, MouseEventArgs e)
+        {
+            //сложение матриц
+            AB11.Text = (int.Parse(A11.Text) + int.Parse(B11.Text)).ToString();
+            AB12.Text = (int.Parse(A12.Text) + int.Parse(B12.Text)).ToString();
+            AB13.Text = (int.Parse(A13.Text) + int.Parse(B13.Text)).ToString();
+            AB21.Text = (int.Parse(A21.Text) + int.Parse(B21.Text)).ToString();
+            AB22.Text = (int.Parse(A22.Text) + int.Parse(B22.Text)).ToString();
+            AB23.Text = (int.Parse(A23.Text) + int.Parse(B23.Text)).ToString();
+            AB31.Text = (int.Parse(A31.Text) + int.Parse(B31.Text)).ToString();
+            AB32.Text = (int.Parse(A32.Text) + int.Parse(B32.Text)).ToString();
+            AB33.Text = (int.Parse(A33.Text) + int.Parse(B33.Text)).ToString();
+        }
+
+        private void button3_MouseClick(object sender, MouseEventArgs e)
+        {
+            //вычитание матриц
+            AB11.Text = (int.Parse(A11.Text) - int.Parse(B11.Text)).ToString();
+            AB12.Text = (int.Parse(A12.Text) - int.Parse(B12.Text)).ToString();
+            AB13.Text = (int.Parse(A13.Text) - int.Parse(B13.Text)).ToString();
+            AB21.Text = (int.Parse(A21.Text) - int.Parse(B21.Text)).ToString();
+            AB22.Text = (int.Parse(A22.Text) - int.Parse(B22.Text)).ToString();
+            AB23.Text = (int.Parse(A23.Text) - int.Parse(B23.Text)).ToString();
+            AB31.Text = (int.Parse(A31.Text) - int.Parse(B31.Text)).ToString();
+            AB32.Text = (int.Parse(A32.Text) - int.Parse(B32.Text)).ToString();
+            AB33.Text = (int.Parse(A33.Text) - int.Parse(B33.Text)).ToString();
+        }
+
+        private void button10_MouseClick(object sender, MouseEventArgs e)
+        {
+            //умножение на число матрицы А
+            B11.Text = (int.Parse(B11.Text) * numberB.Value).ToString();
+            B12.Text = (int.Parse(B12.Text) * numberB.Value).ToString();
+            B13.Text = (int.Parse(B13.Text) * numberB.Value).ToString();
+            B21.Text = (int.Parse(B21.Text) * numberB.Value).ToString();
+            B22.Text = (int.Parse(B22.Text) * numberB.Value).ToString();
+            B23.Text = (int.Parse(B23.Text) * numberB.Value).ToString();
+            B31.Text = (int.Parse(B31.Text) * numberB.Value).ToString();
+            B32.Text = (int.Parse(B32.Text) * numberB.Value).ToString();
+            B33.Text = (int.Parse(B33.Text) * numberB.Value).ToString();
+        }
+
+        private void button14_MouseClick(object sender, MouseEventArgs e)
+        {
+            //умножение на число матрицы B
+            A11.Text = (int.Parse(A11.Text) * numberA.Value).ToString();
+            A21.Text = (int.Parse(A21.Text) * numberA.Value).ToString();
+            A31.Text = (int.Parse(A31.Text) * numberA.Value).ToString();
+            A12.Text = (int.Parse(A12.Text) * numberA.Value).ToString();
+            A22.Text = (int.Parse(A22.Text) * numberA.Value).ToString();
+            A32.Text = (int.Parse(A32.Text) * numberA.Value).ToString();
+            A13.Text = (int.Parse(A13.Text) * numberA.Value).ToString();
+            A23.Text = (int.Parse(A23.Text) * numberA.Value).ToString();
+            A33.Text = (int.Parse(A33.Text) * numberA.Value).ToString();
+        }
+
+        private void button6_MouseClick(object sender, MouseEventArgs e)
+        {
+            //умножение матриц
+            AB11.Text = ((int.Parse(A11.Text) * int.Parse(B11.Text)) + (int.Parse(A21.Text) * int.Parse(B12.Text)) + (int.Parse(A31.Text) * int.Parse(B13.Text))).ToString();
+            AB12.Text = ((int.Parse(A11.Text) * int.Parse(B21.Text)) + (int.Parse(A21.Text) * int.Parse(B22.Text)) + (int.Parse(A31.Text) * int.Parse(B23.Text))).ToString();
+            AB13.Text = ((int.Parse(A11.Text) * int.Parse(B31.Text)) + (int.Parse(A21.Text) * int.Parse(B32.Text)) + (int.Parse(A31.Text) * int.Parse(B33.Text))).ToString();
+            AB21.Text = ((int.Parse(A12.Text) * int.Parse(B11.Text)) + (int.Parse(A22.Text) * int.Parse(B12.Text)) + (int.Parse(A32.Text) * int.Parse(B13.Text))).ToString();
+            AB22.Text = ((int.Parse(A12.Text) * int.Parse(B21.Text)) + (int.Parse(A22.Text) * int.Parse(B22.Text)) + (int.Parse(A32.Text) * int.Parse(B23.Text))).ToString();
+            AB23.Text = ((int.Parse(A12.Text) * int.Parse(B31.Text)) + (int.Parse(A22.Text) * int.Parse(B32.Text)) + (int.Parse(A32.Text) * int.Parse(B33.Text))).ToString();
+            AB31.Text = ((int.Parse(A13.Text) * int.Parse(B11.Text)) + (int.Parse(A23.Text) * int.Parse(B12.Text)) + (int.Parse(A33.Text) * int.Parse(B13.Text))).ToString();
+            AB32.Text = ((int.Parse(A13.Text) * int.Parse(B21.Text)) + (int.Parse(A23.Text) * int.Parse(B22.Text)) + (int.Parse(A33.Text) * int.Parse(B23.Text))).ToString();
+            AB33.Text = ((int.Parse(A13.Text) * int.Parse(B31.Text)) + (int.Parse(A23.Text) * int.Parse(B32.Text)) + (int.Parse(A33.Text) * int.Parse(B33.Text))).ToString();
+        }
+
+        private void button7_MouseClick(object sender, MouseEventArgs e)
+        {
+            //обратная матрица A
+            int a = (int.Parse(A22.Text) * int.Parse(A33.Text) - int.Parse(A32.Text) * int.Parse(A23.Text));
+            int b = (int.Parse(A21.Text) * int.Parse(A33.Text) - int.Parse(A31.Text) * int.Parse(A23.Text));
+            int c = (int.Parse(A21.Text) * int.Parse(A32.Text) - int.Parse(A31.Text) * int.Parse(A22.Text));
+            int det = int.Parse(A11.Text) * a - int.Parse(A12.Text) * b + int.Parse(A13.Text) * c;
+            if (det != 0)
+            {
+
+            }
+        }
+
+        private void button8_MouseClick(object sender, MouseEventArgs e)
+        {
+            //определитель A
+            int a = (int.Parse(A22.Text) * int.Parse(A33.Text) - int.Parse(A32.Text) * int.Parse(A23.Text));
+            int b = (int.Parse(A21.Text) * int.Parse(A33.Text) - int.Parse(A31.Text) * int.Parse(A23.Text));
+            int c = (int.Parse(A21.Text) * int.Parse(A32.Text) - int.Parse(A31.Text) * int.Parse(A22.Text));
+            textBox28.Text = (int.Parse(A11.Text) * a - int.Parse(A12.Text) * b + int.Parse(A13.Text) * c).ToString();
+        }
+
+        private void button13_MouseClick(object sender, MouseEventArgs e)
+        {
+            //определитель B
+            int a = (int.Parse(B22.Text) * int.Parse(B33.Text) - int.Parse(B32.Text) * int.Parse(B23.Text));
+            int b = (int.Parse(B21.Text) * int.Parse(B33.Text) - int.Parse(B31.Text) * int.Parse(B23.Text));
+            int c = (int.Parse(B21.Text) * int.Parse(B32.Text) - int.Parse(B31.Text) * int.Parse(B22.Text));
+            textBox29.Text = (int.Parse(B11.Text) * a - int.Parse(B12.Text) * b + int.Parse(B13.Text) * c).ToString();
+        }
