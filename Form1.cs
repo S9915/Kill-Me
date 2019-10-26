@@ -19,19 +19,9 @@ namespace Matrix
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataGridViewCell id0 = new DataGridViewTextBoxCell();
-            DataGridViewCell brand0 = new DataGridViewTextBoxCell();
-            DataGridViewCell image0 = new DataGridViewImageCell();
-            DataGridViewRow row0 = new DataGridViewRow();
-            row0.Cells.AddRange(id0, brand0, image0);
-            dataGridView1.Rows.Add(row0);
-
-            DataGridViewCell id1 = new DataGridViewTextBoxCell();
-            DataGridViewCell brand1 = new DataGridViewTextBoxCell();
-            DataGridViewCell image1 = new DataGridViewImageCell();
-            DataGridViewRow row1 = new DataGridViewRow();
-            row1.Cells.AddRange(id1, brand1, image1);
-            dataGridView1.Rows.Add(row1);
+            dataGridView1.RowCount = 3;
+            dataGridView2.RowCount = 3;
+            dataGridView3.RowCount = 3;
         }
 
         private void tB_Click(object sender, EventArgs e)
