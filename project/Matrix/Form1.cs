@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Matrix
 {
@@ -161,6 +162,9 @@ namespace Matrix
             MyMatrix matrix1 = new MyMatrix(ar1.GetLength(1), ar1.GetLength(0));
             matrix1.Zapoln(firstDgv);
             matrix1.Trans();
+            var d = firstColumnNum.Value;
+            firstColumnNum.Value = firstRowNum.Value;
+            firstRowNum.Value = d;
             return matrix1.Output(ar1.GetLength(1), ar1.GetLength(0));
         }
 
@@ -174,6 +178,9 @@ namespace Matrix
             MyMatrix matrix2 = new MyMatrix(ar2.GetLength(1), ar2.GetLength(0));
             matrix2.Zapoln(secondDgv);
             matrix2.Trans();
+            var t = secondColumnNum.Value;
+            secondColumnNum.Value = secondRowNum.Value;
+            secondRowNum.Value = t;
             return matrix2.Output(ar2.GetLength(1), ar2.GetLength(0));
         }
 
@@ -242,6 +249,30 @@ namespace Matrix
         private void inverseB_Click(object sender, EventArgs e)
         {
             PutArrayToDataGridView(InverseB(_second), secondDgv);
+        }
+
+        private void rangA_Click(object sender, EventArgs e)
+        {
+            rankA(_first);
+        }
+
+        private void rankA(double[,] ar1)
+        {
+            MyMatrix matrix1 = new MyMatrix(ar1.GetLength(1), ar1.GetLength(0));
+            matrix1.Zapoln(firstDgv);
+            textBox5.Text = Convert.ToString(matrix1.Rank(matrix1));
+        }
+
+        private void rangB_Click(object sender, EventArgs e)
+        {
+            rankB(_second);
+        }
+
+        private void rankB(double[,] ar2)
+        {
+            MyMatrix matrix2 = new MyMatrix(ar2.GetLength(1), ar2.GetLength(0));
+            matrix2.Zapoln(secondDgv);
+            textBox6.Text = Convert.ToString(matrix2.Rank(matrix2));
         }
 
         private double[,] InverseB(double[,] ar2)
