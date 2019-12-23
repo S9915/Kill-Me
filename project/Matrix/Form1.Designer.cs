@@ -1,4 +1,4 @@
-﻿namespace Matrix
+namespace Matrix
 {
     partial class Form1
     {
@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.transposeAButton = new System.Windows.Forms.Button();
             this.firstDgv = new System.Windows.Forms.DataGridView();
             this.secondDgv = new System.Windows.Forms.DataGridView();
             this.resultDgv = new System.Windows.Forms.DataGridView();
@@ -57,15 +56,26 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.detB = new System.Windows.Forms.Button();
-            this.transposeBButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.mA = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.mB = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.rangA = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.inverseA = new System.Windows.Forms.Button();
+            this.transposeAButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.rangB = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.inverseB = new System.Windows.Forms.Button();
+            this.transposeBButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firstDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondDgv)).BeginInit();
@@ -84,6 +94,10 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -97,7 +111,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.transposeAButton, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.firstDgv, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.secondDgv, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.resultDgv, 3, 2);
@@ -109,11 +122,14 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel9, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.transposeBButton, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel11, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel10, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.inverseA, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.inverseB, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel12, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel13, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel14, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel15, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -124,20 +140,24 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1571, 711);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1571, 730);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // transposeAButton
-            // 
-            this.transposeAButton.Location = new System.Drawing.Point(3, 629);
-            this.transposeAButton.Name = "transposeAButton";
-            this.transposeAButton.Size = new System.Drawing.Size(165, 37);
-            this.transposeAButton.TabIndex = 10;
-            this.transposeAButton.Text = "Транспонировать А";
-            this.transposeAButton.UseVisualStyleBackColor = true;
-            this.transposeAButton.Click += new System.EventHandler(this.transposeAButton_Click);
             // 
             // firstDgv
             // 
@@ -233,6 +253,7 @@
             // 
             this.secondColumnNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.secondColumnNum.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.secondColumnNum.Location = new System.Drawing.Point(277, 4);
             this.secondColumnNum.Margin = new System.Windows.Forms.Padding(4);
             this.secondColumnNum.Minimum = new decimal(new int[] {
@@ -241,6 +262,7 @@
             0,
             0});
             this.secondColumnNum.Name = "secondColumnNum";
+            this.secondColumnNum.ReadOnly = true;
             this.secondColumnNum.Size = new System.Drawing.Size(88, 22);
             this.secondColumnNum.TabIndex = 0;
             this.secondColumnNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -271,6 +293,7 @@
             // 
             this.secondRowNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.secondRowNum.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.secondRowNum.Location = new System.Drawing.Point(277, 4);
             this.secondRowNum.Margin = new System.Windows.Forms.Padding(4);
             this.secondRowNum.Minimum = new decimal(new int[] {
@@ -279,6 +302,7 @@
             0,
             0});
             this.secondRowNum.Name = "secondRowNum";
+            this.secondRowNum.ReadOnly = true;
             this.secondRowNum.Size = new System.Drawing.Size(88, 22);
             this.secondRowNum.TabIndex = 0;
             this.secondRowNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -321,6 +345,7 @@
             // 
             this.firstRowNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.firstRowNum.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.firstRowNum.Location = new System.Drawing.Point(238, 4);
             this.firstRowNum.Margin = new System.Windows.Forms.Padding(4);
             this.firstRowNum.Minimum = new decimal(new int[] {
@@ -329,6 +354,7 @@
             0,
             0});
             this.firstRowNum.Name = "firstRowNum";
+            this.firstRowNum.ReadOnly = true;
             this.firstRowNum.Size = new System.Drawing.Size(88, 22);
             this.firstRowNum.TabIndex = 0;
             this.firstRowNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -371,6 +397,7 @@
             // 
             this.firstColumnNum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.firstColumnNum.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.firstColumnNum.Location = new System.Drawing.Point(238, 4);
             this.firstColumnNum.Margin = new System.Windows.Forms.Padding(4);
             this.firstColumnNum.Minimum = new decimal(new int[] {
@@ -379,6 +406,7 @@
             0,
             0});
             this.firstColumnNum.Name = "firstColumnNum";
+            this.firstColumnNum.ReadOnly = true;
             this.firstColumnNum.Size = new System.Drawing.Size(88, 22);
             this.firstColumnNum.TabIndex = 0;
             this.firstColumnNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -470,6 +498,8 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Controls.Add(this.detA, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -478,6 +508,7 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel8.Size = new System.Drawing.Size(468, 45);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
@@ -485,7 +516,7 @@
             // 
             this.detA.Location = new System.Drawing.Point(3, 3);
             this.detA.Name = "detA";
-            this.detA.Size = new System.Drawing.Size(161, 35);
+            this.detA.Size = new System.Drawing.Size(161, 37);
             this.detA.TabIndex = 13;
             this.detA.Text = "Детерминант А";
             this.detA.UseVisualStyleBackColor = true;
@@ -493,10 +524,13 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox1.Location = new System.Drawing.Point(237, 3);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 14;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tableLayoutPanel9
             // 
@@ -516,30 +550,23 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox2.Location = new System.Drawing.Point(276, 3);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 15;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // detB
             // 
             this.detB.Location = new System.Drawing.Point(3, 3);
             this.detB.Name = "detB";
-            this.detB.Size = new System.Drawing.Size(165, 34);
+            this.detB.Size = new System.Drawing.Size(165, 37);
             this.detB.TabIndex = 12;
             this.detB.Text = "Детерминант Б";
             this.detB.UseVisualStyleBackColor = true;
             this.detB.Click += new System.EventHandler(this.detB_Click);
-            // 
-            // transposeBButton
-            // 
-            this.transposeBButton.Location = new System.Drawing.Point(479, 629);
-            this.transposeBButton.Name = "transposeBButton";
-            this.transposeBButton.Size = new System.Drawing.Size(169, 37);
-            this.transposeBButton.TabIndex = 11;
-            this.transposeBButton.Text = "Транспонировать Б";
-            this.transposeBButton.UseVisualStyleBackColor = true;
-            this.transposeBButton.Click += new System.EventHandler(this.transposeBButton_Click);
             // 
             // tableLayoutPanel11
             // 
@@ -572,8 +599,10 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(237, 3);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.Size = new System.Drawing.Size(52, 22);
             this.textBox3.TabIndex = 15;
+            this.textBox3.Text = "2";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tableLayoutPanel10
             // 
@@ -607,34 +636,168 @@
             // 
             this.textBox4.Location = new System.Drawing.Point(276, 3);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.Size = new System.Drawing.Size(52, 22);
             this.textBox4.TabIndex = 16;
+            this.textBox4.Text = "2";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(1033, 526);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(499, 38);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Две матрицы можно перемножить если количество столбцов первой матрицы равно колич" +
+    "еству строк второй матрицы.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(1033, 573);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(499, 38);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Складывать и вычитать можно матрицы одного размера в результате получается матриц" +
+    "а того же размера.";
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 2;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 236F));
+            this.tableLayoutPanel12.Controls.Add(this.rangA, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.textBox5, 1, 0);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 629);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(469, 43);
+            this.tableLayoutPanel12.TabIndex = 13;
+            // 
+            // rangA
+            // 
+            this.rangA.Location = new System.Drawing.Point(3, 3);
+            this.rangA.Name = "rangA";
+            this.rangA.Size = new System.Drawing.Size(161, 37);
+            this.rangA.TabIndex = 17;
+            this.rangA.Text = "Ранг А";
+            this.rangA.UseVisualStyleBackColor = true;
+            this.rangA.Click += new System.EventHandler(this.rangA_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(236, 3);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 18;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 2;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 236F));
+            this.tableLayoutPanel13.Controls.Add(this.inverseA, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.transposeAButton, 1, 0);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 680);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(469, 47);
+            this.tableLayoutPanel13.TabIndex = 17;
             // 
             // inverseA
             // 
-            this.inverseA.Location = new System.Drawing.Point(3, 672);
+            this.inverseA.Location = new System.Drawing.Point(3, 3);
             this.inverseA.Name = "inverseA";
-            this.inverseA.Size = new System.Drawing.Size(165, 36);
+            this.inverseA.Size = new System.Drawing.Size(165, 37);
             this.inverseA.TabIndex = 13;
             this.inverseA.Text = "Обратная А";
             this.inverseA.UseVisualStyleBackColor = true;
             this.inverseA.Click += new System.EventHandler(this.inverseA_Click);
             // 
+            // transposeAButton
+            // 
+            this.transposeAButton.Location = new System.Drawing.Point(236, 3);
+            this.transposeAButton.Name = "transposeAButton";
+            this.transposeAButton.Size = new System.Drawing.Size(165, 37);
+            this.transposeAButton.TabIndex = 10;
+            this.transposeAButton.Text = "Транспонировать А";
+            this.transposeAButton.UseVisualStyleBackColor = true;
+            this.transposeAButton.Click += new System.EventHandler(this.transposeAButton_Click);
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 2;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
+            this.tableLayoutPanel14.Controls.Add(this.rangB, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.textBox6, 1, 0);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(479, 629);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(548, 43);
+            this.tableLayoutPanel14.TabIndex = 13;
+            // 
+            // rangB
+            // 
+            this.rangB.Location = new System.Drawing.Point(3, 3);
+            this.rangB.Name = "rangB";
+            this.rangB.Size = new System.Drawing.Size(166, 37);
+            this.rangB.TabIndex = 20;
+            this.rangB.Text = "Ранг Б";
+            this.rangB.UseVisualStyleBackColor = true;
+            this.rangB.Click += new System.EventHandler(this.rangB_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(276, 3);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 22);
+            this.textBox6.TabIndex = 19;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 2;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
+            this.tableLayoutPanel15.Controls.Add(this.inverseB, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.transposeBButton, 1, 0);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(479, 680);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(548, 43);
+            this.tableLayoutPanel15.TabIndex = 19;
+            // 
             // inverseB
             // 
-            this.inverseB.Location = new System.Drawing.Point(479, 672);
+            this.inverseB.Location = new System.Drawing.Point(3, 3);
             this.inverseB.Name = "inverseB";
-            this.inverseB.Size = new System.Drawing.Size(169, 36);
+            this.inverseB.Size = new System.Drawing.Size(169, 33);
             this.inverseB.TabIndex = 14;
             this.inverseB.Text = "Обратная Б";
             this.inverseB.UseVisualStyleBackColor = true;
             this.inverseB.Click += new System.EventHandler(this.inverseB_Click);
             // 
+            // transposeBButton
+            // 
+            this.transposeBButton.Location = new System.Drawing.Point(276, 3);
+            this.transposeBButton.Name = "transposeBButton";
+            this.transposeBButton.Size = new System.Drawing.Size(169, 37);
+            this.transposeBButton.TabIndex = 11;
+            this.transposeBButton.Text = "Транспонировать Б";
+            this.transposeBButton.UseVisualStyleBackColor = true;
+            this.transposeBButton.Click += new System.EventHandler(this.transposeBButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1571, 711);
+            this.ClientSize = new System.Drawing.Size(1571, 730);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -643,6 +806,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Калькулятор матриц";
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firstDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultDgv)).EndInit();
@@ -668,6 +832,12 @@
             this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -710,5 +880,15 @@
         private System.Windows.Forms.Button mB;
         private System.Windows.Forms.Button inverseA;
         private System.Windows.Forms.Button inverseB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button rangA;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button rangB;
     }
 }
