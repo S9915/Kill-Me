@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,32 +26,9 @@ namespace Matrix
         //заполнение
         public void Zapoln(DataGridView grid)
         {
-            if (V < G)
-            {
-                for (int i = 0; i < V++; i++)
-                {
-                    for (int j = 0; j < G--; j++)
-                        a[i, j] = Convert.ToDouble(grid.Rows[j].Cells[i].Value);
-                }
-            }
-               
-            if (V > G)
-            {
-                for (int i = 0; i < V--; i++)
-                {
-                    for (int j = 0; j < G++; j++)
-                        a[i, j] = Convert.ToDouble(grid.Rows[j].Cells[i].Value);
-                }
-            }
-
-            else
-            {
-                for (int i = 0; i < V; i++)
-                {
-                    for (int j = 0; j < G; j++)
-                        a[i, j] = Convert.ToDouble(grid.Rows[j].Cells[i].Value);
-                }
-            }   
+            for (int i = 0; i < V; i++)
+                for (int j = 0; j < G; j++)
+                    a[i, j] = Convert.ToDouble(grid.Rows[j].Cells[i].Value);
         }
 
         //сложение
@@ -238,6 +215,43 @@ namespace Matrix
                 }
             }
             return NewMatrix;
+        }
+
+        public int Rank(MyMatrix input)
+        {
+            int rang = 0;
+            int q = 1;
+            while (q <= MinValue(input.V, input.G))
+            {
+                MyMatrix matbv = new MyMatrix(q,q);
+                for (int i = 0; i < (input.V - (q - 1)); i++)
+                {
+                    for (int j = 0; j < (input.G - (q - 1)); j++)
+                    {
+                        for (int k = 0; k < q; k++)
+                        {
+                            for (int c = 0; c < q; c++)
+                            {
+                                matbv.a[k, c] = input.a[i + k, j + c];
+                            }
+                        }
+                        if (Determinant(matbv) != 0)
+                        {
+                            rang = q;
+                        }
+                    }
+                }
+                q++;
+            }
+            return rang;
+        }
+
+        private int MinValue(int a, int b)
+        {
+            if (a >= b)
+                return b;
+            else
+                return a;
         }
     }
 }
