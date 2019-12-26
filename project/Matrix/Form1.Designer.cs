@@ -623,6 +623,7 @@ namespace Matrix
             this.textBox3.TabIndex = 15;
             this.textBox3.Text = "2";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // tableLayoutPanel10
             // 
@@ -660,6 +661,7 @@ namespace Matrix
             this.textBox4.TabIndex = 16;
             this.textBox4.Text = "2";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // label1
             // 
@@ -708,8 +710,10 @@ namespace Matrix
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox5.Location = new System.Drawing.Point(236, 3);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(100, 22);
             this.textBox5.TabIndex = 18;
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -773,8 +777,10 @@ namespace Matrix
             // 
             // textBox6
             // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textBox6.Location = new System.Drawing.Point(276, 3);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(100, 22);
             this.textBox6.TabIndex = 19;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
