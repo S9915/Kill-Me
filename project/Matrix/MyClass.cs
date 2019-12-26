@@ -164,9 +164,9 @@ namespace Matrix
         public double[,] Multiplayer(MyMatrix temp, double n)
         {
             double[,] Mat = new double[temp.G, temp.V];
-            for (int i = 0; i < temp.G; i++)
+            for (int i = 0; i < temp.V; i++)
             {
-                for (int j = 0; j < temp.V; j++)
+                for (int j = 0; j < temp.G; j++)
                 {
                     Mat[j, i] = temp.a[i, j] * n;
                 }
