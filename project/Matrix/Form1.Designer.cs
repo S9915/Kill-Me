@@ -256,6 +256,11 @@ namespace Matrix
             this.secondColumnNum.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.secondColumnNum.Location = new System.Drawing.Point(277, 4);
             this.secondColumnNum.Margin = new System.Windows.Forms.Padding(4);
+            this.secondColumnNum.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.secondColumnNum.Minimum = new decimal(new int[] {
             1,
             0,
@@ -296,6 +301,11 @@ namespace Matrix
             this.secondRowNum.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.secondRowNum.Location = new System.Drawing.Point(277, 4);
             this.secondRowNum.Margin = new System.Windows.Forms.Padding(4);
+            this.secondRowNum.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.secondRowNum.Minimum = new decimal(new int[] {
             1,
             0,
@@ -348,6 +358,11 @@ namespace Matrix
             this.firstRowNum.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.firstRowNum.Location = new System.Drawing.Point(238, 4);
             this.firstRowNum.Margin = new System.Windows.Forms.Padding(4);
+            this.firstRowNum.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.firstRowNum.Minimum = new decimal(new int[] {
             1,
             0,
@@ -400,6 +415,11 @@ namespace Matrix
             this.firstColumnNum.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.firstColumnNum.Location = new System.Drawing.Point(238, 4);
             this.firstColumnNum.Margin = new System.Windows.Forms.Padding(4);
+            this.firstColumnNum.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.firstColumnNum.Minimum = new decimal(new int[] {
             1,
             0,
