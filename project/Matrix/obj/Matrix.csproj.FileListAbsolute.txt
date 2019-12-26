@@ -1,0 +1,9 @@
+F:\Какие-то файлы\Matrix\Matrix\bin\Debug\Matrix.exe.config
+F:\Какие-то файлы\Matrix\Matrix\bin\Debug\Matrix.exe
+F:\Какие-то файлы\Matrix\Matrix\bin\Debug\Matrix.pdb
+F:\Какие-то файлы\Matrix\Matrix\obj\Debug\Matrix.csprojAssemblyReference.cache
+F:\Какие-то файлы\Matrix\Matrix\obj\Debug\Matrix.Form1.resources
+F:\Какие-то файлы\Matrix\Matrix\obj\Debug\Matrix.Properties.Resources.resources
+F:\Какие-то файлы\Matrix\Matrix\obj\Debug\Matrix.csproj.GenerateResource.cache
+F:\Какие-то файлы\Matrix\Matrix\obj\Debug\Matrix.exe
+F:\Какие-то файлы\Matrix\Matrix\obj\Debug\Matrix.pdb
