@@ -170,7 +170,7 @@ namespace Matrix
 
         private void transposeBButton_Click(object sender, EventArgs e)
         {
-            PutArrayToDataGridView(TransB(_second), firstDgv);
+            PutArrayToDataGridView(TransB(_second), secondDgv);
         }
 
         private double[,] TransB(double[,] ar2)
@@ -217,8 +217,14 @@ namespace Matrix
         {
             MyMatrix matrix1 = new MyMatrix(ar1.GetLength(1), ar1.GetLength(0));
             matrix1.Zapoln(firstDgv);
-            int num = Convert.ToInt32(textBox3.Text);
-            return matrix1.Multiplayer(matrix1, num);
+            if (!string.IsNullOrEmpty(textBox3.Text))
+            {
+                int num = Convert.ToInt32(textBox3.Text);
+                return matrix1.Multiplayer(matrix1, num);
+            }
+            else
+                return matrix1.Multiplayer(matrix1, 1);
+ 
         }
 
         private void mB_Click(object sender, EventArgs e)
@@ -230,8 +236,13 @@ namespace Matrix
         {
             MyMatrix matrix2 = new MyMatrix(ar2.GetLength(1), ar2.GetLength(0));
             matrix2.Zapoln(secondDgv);
-            int num = Convert.ToInt32(textBox4.Text);
-            return matrix2.Multiplayer(matrix2, num);
+            if (!string.IsNullOrEmpty(textBox4.Text))
+            {
+                int num = Convert.ToInt32(textBox4.Text);
+                return matrix2.Multiplayer(matrix2, num);
+            }
+            else
+                return matrix2.Multiplayer(matrix2, 1);
         }
 
         private void inverseA_Click(object sender, EventArgs e)
@@ -273,6 +284,18 @@ namespace Matrix
             MyMatrix matrix2 = new MyMatrix(ar2.GetLength(1), ar2.GetLength(0));
             matrix2.Zapoln(secondDgv);
             textBox6.Text = Convert.ToString(matrix2.Rank(matrix2));
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (char)Keys.Back != e.KeyChar)
+                e.Handled = true;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (char)Keys.Back != e.KeyChar)
+                e.Handled = true;
         }
 
         private double[,] InverseB(double[,] ar2)
