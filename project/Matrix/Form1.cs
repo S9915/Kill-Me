@@ -133,7 +133,7 @@ namespace Matrix
             matrix1.Zapoln(firstDgv);
             matrix2.Zapoln(secondDgv);
             matrix3 = (matrix1 * matrix2);
-            return matrix3.Output(ar2.GetLength(1), ar2.GetLength(0));
+            return matrix3.Output(ar1.GetLength(0), ar2.GetLength(1));
         }
 
         private void minusButton_Click(object sender, EventArgs e)
