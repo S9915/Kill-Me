@@ -76,6 +76,7 @@ namespace Matrix
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.inverseB = new System.Windows.Forms.Button();
             this.transposeBButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firstDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondDgv)).BeginInit();
@@ -130,6 +131,7 @@ namespace Matrix
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel13, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel14, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel15, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 2, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -821,6 +823,17 @@ namespace Matrix
             this.transposeBButton.UseVisualStyleBackColor = true;
             this.transposeBButton.Click += new System.EventHandler(this.transposeBButton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(1033, 626);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(511, 38);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Только квадратную матрицу можно инвертировать. Если определитель матрицы равен ну" +
+    "лю, то обратную матрицу нельзя посроить";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -918,5 +931,6 @@ namespace Matrix
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button rangB;
+        private System.Windows.Forms.Label label7;
     }
 }
