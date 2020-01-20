@@ -197,24 +197,32 @@ namespace Matrix
         public double [,] Inverse(MyMatrix m)
         {
             MyMatrix ma = new MyMatrix(m.G, m.V);
-            for (int r = 0; r < m.V; r++)
+            if (Determinant(ma) == 0)
             {
-                for (int c = 0; c < m.G; c++)
-                {
-                    ma.a[r, c] = Math.Pow(-1, r + c) * Determinant(Minor(m, r, c));
-                }
+                double[,] NewMatrix = new double[m.G, m.V];
+                return NewMatrix;
             }
-            ma.Trans();
+            else
+            {
+                for (int r = 0; r < m.V; r++)
+                {
+                    for (int c = 0; c < m.G; c++)
+                    {
+                        ma.a[r, c] = Math.Pow(-1, r + c) * Determinant(Minor(m, r, c));
+                    }
+                }
+                ma.Trans();
 
-            double[,] NewMatrix = new double[m.G, m.V];
-            for (int i = 0; i < m.V; i++)
-            {
-                for (int j = 0; j < m.G; j++)
+                double[,] NewMatrix = new double[m.G, m.V];
+                for (int i = 0; i < m.V; i++)
                 {
-                    NewMatrix[i, j] = (ma.a[i,j] / Determinant(m));
+                    for (int j = 0; j < m.G; j++)
+                    {
+                        NewMatrix[i, j] = (ma.a[i, j] / Determinant(m));
+                    }
                 }
+                return NewMatrix;
             }
-            return NewMatrix;
         }
 
         public int Rank(MyMatrix input)
