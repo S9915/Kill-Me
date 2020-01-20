@@ -97,12 +97,14 @@ namespace Matrix
                 for (int j = 0; j < ar.GetLength(1); j++)
                 {
                 
-                    dgv[j, i].Value = Math.Round(ar[i, j], 3);
+                    dgv[j, i].Value = Math.Round(ar[i, j], 5);
                 }
             }
             evaluateButton.Enabled = firstColumnNum.Value.Equals(secondRowNum.Value);
             detA.Enabled = firstColumnNum.Value.Equals(firstRowNum.Value);
             detB.Enabled = secondColumnNum.Value.Equals(secondRowNum.Value);
+            inverseA.Enabled = firstColumnNum.Value.Equals(firstRowNum.Value);
+            inverseB.Enabled = secondColumnNum.Value.Equals(secondRowNum.Value);
             minusButton.Enabled = (firstRowNum.Value.Equals(secondRowNum.Value) && (firstColumnNum.Value.Equals(secondColumnNum.Value)));
             summButton.Enabled = (firstRowNum.Value.Equals(secondRowNum.Value) && (firstColumnNum.Value.Equals(secondColumnNum.Value)));
         }
@@ -342,7 +344,7 @@ namespace Matrix
                 e.Handled = true;
             if (e.KeyChar == ',' && (Sender as TextBox).Text.IndexOf(',') > -1)
                 e.Handled = true;
-            if (e.KeyChar == '-' && (Sender as TextBox).Text.IndexOf('-') > -1 && (!Char.IsNumber(e.KeyChar)))
+            if (e.KeyChar == '-' && (Sender as TextBox).Text.IndexOf('-') > -1)
                 e.Handled = true;
         }
 
