@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 
@@ -57,6 +58,7 @@ namespace Matrix
         private void firstDgv_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             _first[e.RowIndex, e.ColumnIndex] = double.Parse(firstDgv[e.ColumnIndex, e.RowIndex].Value.ToString());
+
         }
 
         private void secondDgv_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -94,6 +96,7 @@ namespace Matrix
             {
                 for (int j = 0; j < ar.GetLength(1); j++)
                 {
+                
                     dgv[j, i].Value = Math.Round(ar[i, j], 3);
                 }
             }
@@ -288,14 +291,64 @@ namespace Matrix
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && (char)Keys.Back != e.KeyChar)
-                e.Handled = true;
+            if (textBox3.Text.Length >= 1)
+            {
+                if (textBox3.Text.Contains("0"))
+                {
+                    if (e.KeyChar == (char)Keys.Back)
+                        return;
+                    else
+                        e.Handled = true;
+                }
+                else if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+                    e.Handled = true;
+            }
         }
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && (char)Keys.Back != e.KeyChar)
+            if (textBox4.Text.Length >= 1)
+            {
+                if (textBox4.Text.Contains("0"))
+                {
+                    if (e.KeyChar == (char)Keys.Back) 
+                        return; 
+                    else 
+                        e.Handled = true; 
+                }
+                else if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back) 
+                    e.Handled = true;
+            }
+        }
+
+        private void firstDgv_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress += new KeyPressEventHandler(Cell_KeyPress);
+            if (firstDgv.CurrentCell.ColumnIndex == 1)
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Cell_KeyPress);
+                }
+            }
+
+        }
+
+        private void Cell_KeyPress(object Sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((!Char.IsNumber(e.KeyChar) && (e.KeyChar != '-') &&(e.KeyChar != ',')) && number != 8)
                 e.Handled = true;
+            if (e.KeyChar == ',' && (Sender as TextBox).Text.IndexOf(',') > -1)
+                e.Handled = true;
+            if (e.KeyChar == '-' && (Sender as TextBox).Text.IndexOf('-') > -1 && (!Char.IsNumber(e.KeyChar)))
+                e.Handled = true;
+        }
+
+        private void secondDgv_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress += new KeyPressEventHandler(Cell_KeyPress);
         }
 
         private double[,] InverseB(double[,] ar2)
