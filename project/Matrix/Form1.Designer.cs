@@ -156,7 +156,7 @@ namespace Matrix
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1571, 730);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1571, 737);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // firstDgv
@@ -178,6 +178,7 @@ namespace Matrix
             this.firstDgv.Size = new System.Drawing.Size(468, 430);
             this.firstDgv.TabIndex = 1;
             this.firstDgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.firstDgv_CellEndEdit);
+            this.firstDgv.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.firstDgv_EditingControlShowing);
             // 
             // secondDgv
             // 
@@ -198,6 +199,7 @@ namespace Matrix
             this.secondDgv.Size = new System.Drawing.Size(546, 430);
             this.secondDgv.TabIndex = 1;
             this.secondDgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.secondDgv_CellEndEdit);
+            this.secondDgv.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.secondDgv_EditingControlShowing);
             // 
             // resultDgv
             // 
@@ -536,7 +538,7 @@ namespace Matrix
             // 
             this.detA.Location = new System.Drawing.Point(3, 3);
             this.detA.Name = "detA";
-            this.detA.Size = new System.Drawing.Size(161, 37);
+            this.detA.Size = new System.Drawing.Size(166, 37);
             this.detA.TabIndex = 13;
             this.detA.Text = "Детерминант А";
             this.detA.UseVisualStyleBackColor = true;
@@ -609,9 +611,9 @@ namespace Matrix
             // 
             this.mA.Location = new System.Drawing.Point(3, 3);
             this.mA.Name = "mA";
-            this.mA.Size = new System.Drawing.Size(165, 37);
+            this.mA.Size = new System.Drawing.Size(166, 37);
             this.mA.TabIndex = 18;
-            this.mA.Text = "Умножить А на";
+            this.mA.Text = "Умножить А на целое";
             this.mA.UseVisualStyleBackColor = true;
             this.mA.Click += new System.EventHandler(this.mA_Click);
             // 
@@ -649,7 +651,7 @@ namespace Matrix
             this.mB.Name = "mB";
             this.mB.Size = new System.Drawing.Size(165, 37);
             this.mB.TabIndex = 17;
-            this.mB.Text = "Умножить Б на";
+            this.mB.Text = "Умножить Б на целое";
             this.mB.UseVisualStyleBackColor = true;
             this.mB.Click += new System.EventHandler(this.mB_Click);
             // 
@@ -702,7 +704,7 @@ namespace Matrix
             // 
             this.rangA.Location = new System.Drawing.Point(3, 3);
             this.rangA.Name = "rangA";
-            this.rangA.Size = new System.Drawing.Size(161, 37);
+            this.rangA.Size = new System.Drawing.Size(166, 37);
             this.rangA.TabIndex = 17;
             this.rangA.Text = "Ранг А";
             this.rangA.UseVisualStyleBackColor = true;
@@ -736,7 +738,7 @@ namespace Matrix
             // 
             this.inverseA.Location = new System.Drawing.Point(3, 3);
             this.inverseA.Name = "inverseA";
-            this.inverseA.Size = new System.Drawing.Size(165, 37);
+            this.inverseA.Size = new System.Drawing.Size(166, 37);
             this.inverseA.TabIndex = 13;
             this.inverseA.Text = "Обратная А";
             this.inverseA.UseVisualStyleBackColor = true;
@@ -746,7 +748,7 @@ namespace Matrix
             // 
             this.transposeAButton.Location = new System.Drawing.Point(236, 3);
             this.transposeAButton.Name = "transposeAButton";
-            this.transposeAButton.Size = new System.Drawing.Size(165, 37);
+            this.transposeAButton.Size = new System.Drawing.Size(166, 37);
             this.transposeAButton.TabIndex = 10;
             this.transposeAButton.Text = "Транспонировать А";
             this.transposeAButton.UseVisualStyleBackColor = true;
@@ -803,7 +805,7 @@ namespace Matrix
             // 
             this.inverseB.Location = new System.Drawing.Point(3, 3);
             this.inverseB.Name = "inverseB";
-            this.inverseB.Size = new System.Drawing.Size(169, 33);
+            this.inverseB.Size = new System.Drawing.Size(166, 37);
             this.inverseB.TabIndex = 14;
             this.inverseB.Text = "Обратная Б";
             this.inverseB.UseVisualStyleBackColor = true;
@@ -813,7 +815,7 @@ namespace Matrix
             // 
             this.transposeBButton.Location = new System.Drawing.Point(276, 3);
             this.transposeBButton.Name = "transposeBButton";
-            this.transposeBButton.Size = new System.Drawing.Size(169, 37);
+            this.transposeBButton.Size = new System.Drawing.Size(166, 37);
             this.transposeBButton.TabIndex = 11;
             this.transposeBButton.Text = "Транспонировать Б";
             this.transposeBButton.UseVisualStyleBackColor = true;
@@ -823,14 +825,14 @@ namespace Matrix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1571, 730);
+            this.ClientSize = new System.Drawing.Size(1571, 737);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Калькулятор матриц";
+            this.Text = " ";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firstDgv)).EndInit();
